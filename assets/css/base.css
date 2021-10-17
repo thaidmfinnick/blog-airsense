@@ -1,0 +1,16 @@
+:root {
+    --title-color: #292929;
+    --text-color: #222222;
+    --white-color: #ffffff;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
