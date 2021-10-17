@@ -1,0 +1,16 @@
+kiểm tra nhánh: git branch
+
+B1: tạo nhánh mới: git branch tên_nhánh
+
+B2: chuyển sang nhánh mới: git switch tên_nhánh
+
+B3: code 
+
+B4: Đẩy code lên server
+ - git add .
+ - git commit -m"thông điệp"
+ - git push origin tên_nhánh
+
+
+đặt tên: blog-header, blog-content, blog-icon-content
+page-blog-content
