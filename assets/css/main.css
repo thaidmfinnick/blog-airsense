@@ -1,0 +1,136 @@
+.blog-wrapper {
+    max-width: 48%;
+    margin: 0 auto;
+    display: block;
+}
+
+.blog-aside {
+    position: fixed;
+    left: 8.33333%;
+    top: 16%;
+    width: 16.66667%;
+}
+
+.blog-aside-username {
+    position: relative;
+    color: var(--title-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e6e6e6;
+}
+
+.blog-aside-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.blog-aside-like,
+.blog-aside-comment {
+    display: inline-block;
+}
+
+h1 {
+    color: var(--title-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.detail-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.blog-detail-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.blog-detail-user {
+    display: flex;
+    align-items: center;
+}
+
+.blog-detail-info {
+    margin-left: 12px;
+}
+
+.blog-detail-name {
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.blog-detail-time {
+    color: #757575;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.blog-detail-dot-icon {
+    font-size: 3px;
+    margin: 0 6px;
+}
+
+.blog-detail-action-icon-bookmark,
+.blog-detail-action-icon-threedot {
+    font-weight: 500;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.blog-detail-action-icon-bookmark {
+    margin-right: 8px;
+}
+
+.blog-detail-action-icon-bookmark:hover,
+.blog-detail-action-icon-threedot:hover {
+    opacity: 1;
+}
+
+.blog-detail-action-icon-bookmark--active {
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.blog-content p,
+.blog-content li,
+.blog-content a {
+    font-size: 18px;
+    margin: 18px 0;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.blog-content li {
+    margin-left: 16px;
+}
+
+.blog-content img {
+    max-width: 100%;
+}
+
+.blog-content strong {
+    font-weight: 600;
+}
+
+.blog-content h2 {
+    font-size: 27px;
+    color: var(--text-color);
+    margin: 23px 0;
+}
+
+.blog-content h3 {
+    font-size: 23px;
+    color: var(--text-color);
+    margin: 21px 0;
+}

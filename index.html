@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -17,11 +19,79 @@
 </head>
 
 <body>
-    <div>
-        <div class="blog-post-container">
-            
+    <div class="blog-wrapper">
+        <div class="blog-aside">
+            <h4 class="blog-aside-username">Kim Phụng</h4>
+            <hr>
+            <div class="blog-aside-action">
+                <div class="blog-aside-like">
+                    <i class="blog-aside-like-icon fal fa-heart"></i>
+                    <span class="blog-aside-like-quantity">69</span>
+                </div>
+                <div class="blog-aside-comment">
+                    <i class="blog-aside-comment fal fa-comment"></i>
+                    <span class="blog-aside-comment-quantity">69</span>
+                </div>
+            </div>
+        </div>
+        <div class="blog-main">
+            <h1 class="blog-detail-heading">[Cơ bản] Life cycle của Component trong Reactjs</h1>
+            <div class="blog-detail-body">
+                <div class="blog-detail-user">
+                    <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                        alt="avatar" class="detail-avatar">
+                    <div class="blog-detail-info">
+                        <p class="blog-detail-name">Kim Phụng</p>
+                        <p class="blog-detail-time">
+                            3 ngày trước
+                            <i class="blog-detail-dot-icon fas fa-circle"></i>
+                            3 phút đọc
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-detail-action">
+                    <i
+                        class="blog-detail-action-icon-bookmark blog-detail-action-icon-bookmark--active fal fa-bookmark"></i>
+                    <i class="blog-detail-action-icon-threedot fal fa-ellipsis-h"></i>
+                </div>
+            </div>
+            <div class="blog-content">
+                <p>Chào anh Sơn và anh em F8!</p>
+                <p>Hôm nay mình sẽ giới thiệu cơ bản về lifecyle của component trong reactjs, gồm các giai đoạn nào và
+                    mỗi giai đoạn sẽ gọi những hàm gì? Hy vọng sẽ được thảo luận cùng anh em đang theo học khóa Reactjs
+                    của anh Sơn.</p>
+                <p>Life cycle là gì? Là vòng đời của một sự vật từ khi sinh ra, lớn lên đến khi mất đi.</p>
+                <p>Lưu ý: Life cyles trong bài này cho class component, việc hiểu rõ life cycle rất quan trọng để hiểu
+                    rõ cách hoạt động component của reactjs.</p>
+                <p>
+                    <strong>1. Định nghĩa:</strong>
+                </p>
+                <p>Life cycle của component trong reactjs là quá trình từ khi tạo ra, thay đổi và hủy bỏ component. Gồm
+                    3 giai đoạn:</p>
+                <img src="https://cdn.fullstack.edu.vn/f8-learning/blog_posts/923/616999882d4d4.png" alt="">
+                <p>
+                    <strong>2. Constructor</strong>
+                </p>
+                <li>Khi component mouting(tạo ra) sẽ đi qua hàm Constructor</li>
+                <li>Trong constructor sẽ khai báo các state, các properties(thuộc tính) của component.</li>
+                <p><strong>3. DidMount()</strong></p>
+                <li>Khi component được Mounting(tạo ra) sau khi đi qua hàm Constructor và render lần đầu thì sẽ gọi hàm
+                    DidMount().</li>
+                <li>Thường được dùng để gọi api để lấy dữ liệu, setState để cập nhật state</li>
+                <p>Như ví dụ ở dưới: gọi api để get nội dung comment và sau đó setState để rerender lại 1 lần nữa. (lúc
+                    này đã có nội dung comment lấy từ api)</p>
+                <p><strong>4. WillUnMount()</strong></p>
+                <li>Khi component unmounting (hủy bỏ) ta sẽ gọi hàm WillUnMount().</li>
+                <li>Khi ta không render component hoặc chuyển trang thì component sẽ bị hủy bỏ để render nội dung mới
+                    lên.</li>
+                <p><strong>Lưu ý</strong>: hàm WillUnMount() chỉ chạy 1 lần duy nhất khi component trong vòng đời của
+                    component. Tương tự
+                    Mount() chỉ chạy 1 lần duy nhất. Còn DidUpdate() có thể gọi nhiều lần nếu có nhiều update</p>
+                <a href="#">https://webpack.js.org/</a>
+            </div>
         </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
