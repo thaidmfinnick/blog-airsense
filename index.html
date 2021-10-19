@@ -20,41 +20,74 @@
 
 <body>
     <div class="blog-wrapper">
-        <div class="blog-aside">
-            <h4 class="blog-aside-username">Kim Phụng</h4>
-            <hr>
-            <div class="blog-aside-action">
-                <div class="blog-aside-like">
-                    <i class="blog-aside-like-icon fal fa-heart"></i>
-                    <span class="blog-aside-like-quantity">69</span>
-                </div>
-                <div class="blog-aside-comment">
-                    <i class="blog-aside-comment fal fa-comment"></i>
-                    <span class="blog-aside-comment-quantity">69</span>
+
+        <div class="blog-aside-wrapper">
+            <div class="blog-aside">
+                <h4 class="blog-aside__username">Đăng Trường</h4>
+                <hr>
+                <div class="blog-aside__action">
+                    <div class="blog-aside__like">
+                        <i class="blog-aside__like-icon blog-aside__like-icon--active  fal fa-heart"></i>
+                        <span class="blog-aside__like-quantity">69</span>
+                    </div>
+                    <div class="blog-aside__comment">
+                        <i class="blog-aside__comment-icon fal fa-comment"></i>
+                        <span class="blog-aside__comment-quantity">69</span>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="blog-main">
-            <h1 class="blog-detail-heading">[Cơ bản] Life cycle của Component trong Reactjs</h1>
-            <div class="blog-detail-body">
-                <div class="blog-detail-user">
+            <h1 class="blog-heading">[Cơ bản] Life cycle của Component trong Reactjs</h1>
+
+            <div class="blog-detail">
+                <div class="blog-detail__user">
                     <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
-                        alt="avatar" class="detail-avatar">
-                    <div class="blog-detail-info">
-                        <p class="blog-detail-name">Kim Phụng</p>
-                        <p class="blog-detail-time">
+                        alt="avatar" class="detail__avatar">
+                    <div class="blog-detail__info">
+                        <p class="blog-detail__name">Đăng Trường</p>
+                        <p class="blog-detail__time">
                             3 ngày trước
-                            <i class="blog-detail-dot-icon fas fa-circle"></i>
+                            <i class="blog-detail__dot-icon fas fa-circle"></i>
                             3 phút đọc
                         </p>
                     </div>
                 </div>
-                <div class="blog-detail-action">
-                    <i
-                        class="blog-detail-action-icon-bookmark blog-detail-action-icon-bookmark--active fal fa-bookmark"></i>
-                    <i class="blog-detail-action-icon-threedot fal fa-ellipsis-h"></i>
+                <div class="blog-detail__action">
+                    <div class="blog-detail__bookmark">
+                        <i class="blog-detail__icon-bookmark blog-detail__icon-bookmark--active fal fa-bookmark"></i>
+                    </div>
+                    <div class="blog-detail__ellipsis">
+                        <i class="blog-detail__icon-ellipsis fal fa-ellipsis-h"></i>
+                    </div>
+                    <div class="blog-detail__option">
+                        <ul class="blog-detail__option-list">
+                            <li class="blog-detail__option-item">
+                                <i class="blog-detail__option-icon fab fa-facebook"></i>
+                                <span class="blog-detail__option-description">Chia sẻ lên Facebook</span>
+                            </li>
+                            <li class="blog-detail__option-item">
+                                <i class="blog-detail__option-icon fab fa-twitter"></i>
+                                <span class="blog-detail__option-description">Chia sẻ lên Twitter</span>
+                            </li>
+                            <li class="blog-detail__option-item">
+                                <i class="blog-detail__option-icon fas fa-envelope"></i>
+                                <span class="blog-detail__option-description">Chia sẻ tới Email</span>
+                            </li>
+                            <li class="blog-detail__option-item">
+                                <i class="blog-detail__option-icon fas fa-link"></i>
+                                <span class="blog-detail__option-description">Sao chép liên kết</span>
+                            </li>
+                            <li class="blog-detail__option-item">
+                                <i class="blog-detail__option-icon fas fa-flag"></i>
+                                <span class="blog-detail__option-description">Báo cáo bài viết</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="blog-content">
                 <p>Chào anh Sơn và anh em F8!</p>
                 <p>Hôm nay mình sẽ giới thiệu cơ bản về lifecyle của component trong reactjs, gồm các giai đoạn nào và
@@ -72,22 +105,185 @@
                 <p>
                     <strong>2. Constructor</strong>
                 </p>
-                <li>Khi component mouting(tạo ra) sẽ đi qua hàm Constructor</li>
-                <li>Trong constructor sẽ khai báo các state, các properties(thuộc tính) của component.</li>
-                <p><strong>3. DidMount()</strong></p>
-                <li>Khi component được Mounting(tạo ra) sau khi đi qua hàm Constructor và render lần đầu thì sẽ gọi hàm
-                    DidMount().</li>
-                <li>Thường được dùng để gọi api để lấy dữ liệu, setState để cập nhật state</li>
+                <ul>
+                    <li>Khi component mouting(tạo ra) sẽ đi qua hàm Constructor</li>
+                </ul>
+                <ul>
+                    <li>Trong constructor sẽ khai báo các state, các properties(thuộc tính) của component.</li>
+                    <p><strong>3. DidMount()</strong></p>
+                </ul>
+                <ul>
+                    <li>Khi component được Mounting(tạo ra) sau khi đi qua hàm Constructor và render lần đầu thì sẽ gọi
+                        hàm
+                        DidMount().</li>
+                </ul>
+                <ul>
+                    <li>Thường được dùng để gọi api để lấy dữ liệu, setState để cập nhật state</li>
+                </ul>
                 <p>Như ví dụ ở dưới: gọi api để get nội dung comment và sau đó setState để rerender lại 1 lần nữa. (lúc
                     này đã có nội dung comment lấy từ api)</p>
                 <p><strong>4. WillUnMount()</strong></p>
-                <li>Khi component unmounting (hủy bỏ) ta sẽ gọi hàm WillUnMount().</li>
-                <li>Khi ta không render component hoặc chuyển trang thì component sẽ bị hủy bỏ để render nội dung mới
-                    lên.</li>
+                <ul>
+                    <li>Khi component unmounting (hủy bỏ) ta sẽ gọi hàm WillUnMount().</li>
+                </ul>
+                <ul>
+                    <li>Khi ta không render component hoặc chuyển trang thì component sẽ bị hủy bỏ để render nội dung mới
+                        lên.</li>
+                </ul>
                 <p><strong>Lưu ý</strong>: hàm WillUnMount() chỉ chạy 1 lần duy nhất khi component trong vòng đời của
                     component. Tương tự
                     Mount() chỉ chạy 1 lần duy nhất. Còn DidUpdate() có thể gọi nhiều lần nếu có nhiều update</p>
                 <a href="#">https://webpack.js.org/</a>
+            </div>
+
+            <div class="blog-bottom">
+                <div class="blog-bottom__action">
+                    <div class="blog-bottom__like">
+                        <i class="blog-bottom__like-icon blog-bottom__like-icon--active fal fa-heart"></i>
+                        <span class="blog-bottom__like-quantity">69</span>
+                    </div>
+                    <div class="blog-bottom__comment">
+                        <i class="blog-bottom__comment-icon fal fa-comment"></i>
+                        <span class="blog-bottom__comment-quantity">69</span>
+                    </div>
+                </div>
+
+                <div class="blog-bottom__tag-wrapper">
+                    <a href="#" class="blog-bottom__tag-item">Front-end</a>
+                    <a href="#" class="blog-bottom__tag-item">Javascript</a>
+                </div>
+
+                <div class="post-with-same-author">
+                    <h3 class="post-with-same-author__heading">Bài đăng cùng tác giả</h3>
+                    <ul class="post-with-same-author__post-list">
+                        <li class="post-with-same-author__post-item">
+                            <a href="" class="post-with-same-author__post-link">[Cơ bản]Object trong Javascript Tổng
+                                quan lập trình Synchronous và Asynchronous</a>
+                        </li>
+                        <li class="post-with-same-author__post-item">
+                            <a href="" class="post-with-same-author__post-link">[Cơ bản]Object trong Javascript</a>
+                        </li>
+                        <li class="post-with-same-author__post-item">
+                            <a href="" class="post-with-same-author__post-link">[Cơ bản]Object trong Javascript</a>
+                        </li>
+                        <li class="post-with-same-author__post-item">
+                            <a href="" class="post-with-same-author__post-link">[Cơ bản]Object trong Javascript</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="comment-container">
+            <div class="comment-close">
+                <i class="fal fa-times"></i>
+            </div>
+            <div class="comment-heading">
+                <h4>3 Bình luận</h4>
+            </div>
+            <div class="my-comment-wrapper">
+                <div class="my-comment">
+                    <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                        alt="" class="my-comment__my-avatar-img">
+                    <input class="my-comment__input" type="text" placeholder="Viết bình luận của bạn...">
+                </div>
+                <button class="my-comment__btn">BÌNH LUẬN</button>
+            </div>
+            <div class="comment-body">
+                <ul class="comment-list">
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ Bài tổng hợp
+                                rất chi tiết. Cảm ơn bác đã chia sẻ Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia
+                                sẻ</span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                    <li class="comment-item">
+                        <img src="https://scontent.fhan4-2.fna.fbcdn.net/v/t1.6435-9/67276829_2429028030712956_3104879828768129024_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=SGf_NmnBKE4AX9U63pE&_nc_oc=AQmb0VTJo3lOw8hTKemhTdCrX7y2dGidGTjjSAaayuwm5N0LeEVY80idA4tZAO6xuBM&_nc_ht=scontent.fhan4-2.fna&oh=07692488c8a4d67f1542948ab4dac8fc&oe=6191F1F0"
+                            alt="" class="comment-avatar">
+                        <div class="comment-box">
+                            <h5 class="comment-author">Trung</h5>
+                            <span class="comment-content">Bài tổng hợp rất chi tiết. Cảm ơn bác đã chia sẻ </span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
