@@ -25,13 +25,35 @@ likeAside.onclick = () => {
 // Option
 const ellipsis = $('.blog-detail__ellipsis');
 const option = $('.blog-detail__option');
-
+const optionList = $('.blog-detail__option-list');
+const optionItems = $$('.blog-detail__option-item');
+const optionIcons = $$('.blog-detail__option-icon');
+const optionDescriptions = $$('.blog-detail__option-description');
 ellipsis.onclick = () => {
     option.classList.add('blog-detail__option--show');
 };
 
+const check = function (eventTarget, optionElements) {
+    let i = 0;
+    optionElements.forEach(function (item) {
+        if (item != eventTarget) i++;
+    });
+    if (i == optionElements.length) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 window.onclick = (event) => {
-    if (event.target != ellipsis && event.target.parentNode != ellipsis) {
+    if (
+        event.target != optionList &&
+        check(event.target, optionItems) &&
+        check(event.target, optionIcons) &&
+        check(event.target, optionDescriptions) &&
+        event.target != ellipsis &&
+        event.target.parentNode != ellipsis
+    ) {
         option.classList.remove('blog-detail__option--show');
     }
 };

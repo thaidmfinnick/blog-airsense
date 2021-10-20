@@ -1,0 +1,58 @@
+@media (max-width: 1113px) and (min-width: 740px) {
+    .blog-aside-wrapper {
+        display: none;
+    }
+    .blog-wrapper {
+        max-width: 100%;
+        padding: 0 48px;
+    }
+    .comment-container {
+        width: 64%;
+    }
+}
+
+@media (max-width: 739px) {
+    .blog-aside-wrapper {
+        display: none;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .blog-wrapper {
+        max-width: 100%;
+        padding: 0 28px;
+    }
+
+    .comment-container {
+        position: static;
+        margin: 0 auto;
+        margin-top: 12px;
+        background-color: #fff;
+        height: 70%;
+        width: calc(100% - 24px);
+        padding: 40px;
+        overflow-y: auto;
+        border-radius: 12px;
+        animation: modalFadeIn ease 0.4s;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .comment-close {
+        position: fixed;
+        right: 1%;
+        top: 1%;
+        padding: 8px;
+    }
+}

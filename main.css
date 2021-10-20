@@ -19,6 +19,18 @@ body {
     line-height: 1.6;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
 .blog-wrapper {
     max-width: 48%;
     margin: 0 auto;
@@ -154,7 +166,7 @@ h1 {
     opacity: 1;
 }
 
-.blog-detail__option{
+.blog-detail__option {
     position: absolute;
     width: 230px;
     top: 40px;
@@ -166,15 +178,15 @@ h1 {
     display: none;
 }
 
-.blog-detail__option--show{
+.blog-detail__option--show {
     display: block;
 }
 
-.blog-detail__option-list{
+.blog-detail__option-list {
     padding: 8px 0;
 }
 
-.blog-detail__option-item{
+.blog-detail__option-item {
     padding: 12px 20px;
     cursor: pointer;
     display: flex;
@@ -185,17 +197,16 @@ h1 {
     background: #f0f0f0;
 }
 
-.blog-detail__option-icon{
+.blog-detail__option-icon {
     margin-right: 16px;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
-.blog-detail__option-description{
+.blog-detail__option-description {
     font-size: 14px;
     color: var(--text-color);
     font-weight: 400;
 }
-
 
 .blog-content p,
 .blog-content li,
@@ -310,7 +321,7 @@ h1 {
     list-style-type: disc;
 }
 
-.post-with-same-author__post-item{
+.post-with-same-author__post-item {
     padding: 4px 0;
 }
 
@@ -332,7 +343,7 @@ h1 {
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+
 }
 
 @keyframes modalFadeIn {
@@ -346,11 +357,14 @@ h1 {
     }
 }
 
-.modal.modal--show {
-    display: block;
+.fadeOut {
+    opacity: 0;
+    transform: translateX(100%);
 }
 
+
 .comment-container {
+    /* display: none; */
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -359,8 +373,14 @@ h1 {
     width: 50%;
     padding: 40px;
     overflow-y: auto;
+    opacity: 1;
+    transform: translateX(0);
     animation: modalFadeIn ease 0.4s;
+    /* transition: all ease 0.4; */
+}
 
+.modal.modal--show {
+    display: block;
 }
 
 .comment-close {
@@ -427,7 +447,6 @@ h1 {
 .comment-body {
     margin-top: 20px;
 }
-
 
 .comment-item {
     display: flex;
