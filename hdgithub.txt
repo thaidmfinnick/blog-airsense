@@ -14,3 +14,5 @@ B4: Đẩy code lên server
 
 đặt tên: blog-header, blog-content, blog-icon-content
 page-blog-content
+
+xin chao Quyen, Minh, Dat
